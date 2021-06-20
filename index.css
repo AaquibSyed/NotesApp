@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Charmonman&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: black;
+  max-height: 100vh;
+  overflow: scroll;
+}
+
+.container {
+  background-color: black;
+  min-width: 100vw;
+  max-width: 1024px;
+  overflow: scroll;
+}
+
+#displayArea {
+  background-color: black;
+  margin-right: 2%;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 25px;
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  color: white;
+  grid-column: 1 / -1; /* to mention that the h1 element should occupy the first row completely*/
+}
+
+.controls {
+  background-color: black;
+  width: 100%;
+  font-size: larger;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  color: gray;
+}
+
+.controls i {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.fa-times,
+.fa-trash {
+  margin: 10px 3px;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.fa-times {
+  margin-right: 2%;
+}
+
+.fa-times:hover,
+.fa-trash:hover {
+  transform: scale(1.2);
+  background-image: linear-gradient(to left, #c02425, #f0cb35);
+  color: whitesmoke;
+}
+
+.inputArea {
+  background-color: black;
+  margin: auto;
+  display: none;
+}
+
+input {
+  background-color: black;
+  width: 98%;
+  padding: 0.3rem;
+  font-family: "Dancing Script", cursive;
+  border: none;
+  outline: none;
+  overflow: wrap;
+  border-bottom: 3px solid gray;
+  font-size: xx-large;
+  color: white;
+  padding-left: 0.25rem;
+}
+
+textarea {
+  background-color: black;
+  margin: 0.5rem 0;
+  width: 98%;
+  font-family: "Dancing Script", cursive;
+  font-size: xx-large;
+  outline: none;
+  border: none;
+  color: white;
+  padding-left: 0.25rem;
+  resize: none; /*to hide the resize symbol available for a textarea Element*/
+}
+
+#footer {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  position: fixed;
+  margin-left: 50%;
+  margin-bottom: 2%;
+}
+
+#footer button {
+  background-image: linear-gradient(to left, #c02425, #f0cb35);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  border: none;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bolder;
+  transition: all 0.2s ease-in-out;
+}
+
+#footer button:hover {
+  transform: scale(1.1);
+}
+
+.newinputArea {
+  color: white;
+  font-family: "Dancing Script", cursive;
+  border-radius: 5px;
+  position: relative;
+  min-height: 160px;
+  max-height: 180px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.newinputArea:hover {
+  box-shadow: 0px 4px 17px rgb(133, 126, 126);
+}
+
+h3 {
+  display: block;
+  max-height: 130px;
+  font-size: 1.7rem;
+  overflow: scroll;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+h3::-webkit-scrollbar {
+  display: none;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 2.5rem;
+  padding: 0.25rem;
+  display: none;
+}
+
+span {
+  width: 100%;
+  font-size: 0.75rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 900;
+  color: white;
+  background-size: 100%;
+  padding-left: 0.25rem;
+  position: absolute;
+  bottom: 2px;
+  border: none;
+}
+
+.warning {
+  border: 2px solid red !important;
+}
+
+@media (max-width: 720px) {
+  #displayArea {
+    gap: 20px;
+  }
+  /* #footer {
+    margin-left: 89.5vw;
+  } */
+}
+
+@media (max-width: 508px) {
+  #displayArea {
+    gap: 20px;
+  }
+
+  #footer {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 400px) {
+  #displayArea {
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  }
+
+  #footer {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 300px) {
+  #displayArea {
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    align-content: center;
+    justify-content: center;
+  }
+
+  #footer {
+    transform: translate(-50%, -50%);
+  }
+}
+
+#bgClrs {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: fit-content;
+  padding: 0.5rem;
+}
+
+#bgClrs button {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid #282828;
+  margin-right: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: lighter;
+}
+
+#blackGray {
+  background-color: #282828;
+}
+
+#maroon {
+  background-color: maroon;
+}
+
+#blueViolet {
+  background-color: #8a2be2;
+}
+
+#deepPurple {
+  background-color: #330033;
+}
+
+#darkerAlice {
+  background-color: #12a7a8;
+}
+
+#darkOliveGreen {
+  background-color: darkOliveGreen; /*#556B2F;*/
+}
+
+#deepBurgundy {
+  background-color: #660033;
+}
+
+#burntUmber {
+  background-color: #330000;
+}
+
+#midnightBlue {
+  background-color: #000033;
+}
+
+#tangerineTango {
+  background-color: #dd4124;
+}
+
+#darkestKelly {
+  background-color: #829356; /*rgb(189, 83, 83);*/
+}
+
+#blue {
+  background-color: rgb(70, 70, 224);
+}
+
+#fuchsiaRose {
+  background-color: #c3447a;
+}
+
+#indigoBlue {
+  background-color: #330066;
+}
+
+#peruvianTurquoise {
+  background-color: #003333;
+}
+
+.fa-check {
+  display: none;
+  pointer-events: none;
+}
+
+.selected {
+  color: white;
+  display: inline-block;
+  font-size: 65%;
+}
+
+.animateZoom {
+  animation: zoom-in-zoom-out 0.3s ease-out;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(0, 0);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
